@@ -1,9 +1,13 @@
 pipeline {
     agent any
+    
+    triggers {
+        githubPush()
+    }
 
     environment {
         PORT = '5000'
-    }
+    }  
 
     stages {
         stage('Clone Repository') {
