@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     triggers {
         githubPush()
     }
@@ -21,11 +21,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Start it') {
-            steps {
-                sh 'npm start'
-            }
-        }
+        // stage('Start it') {
+        //     steps {
+        //         sh 'npm start'
+        //     }
+        // }
     }
 
     post {
